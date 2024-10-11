@@ -53,9 +53,13 @@ function showNextLine() {
         line.className = 'fade-in';
         poemDiv.appendChild(line);
         currentLineIndex++;
-        
-        // Set timeout for next line
-        setTimeout(showNextLine, 3000); // 3 seconds delay
+
+        // Show for 5 seconds, then hide for 3 seconds
+        setTimeout(() => {
+            // Hide the line after 5 seconds
+            poemDiv.innerHTML = ''; // Clear the line
+            setTimeout(showNextLine, 3000); // Wait for 3 seconds before showing the next line
+        }, 5000); // Show line for 5 seconds
     }
 }
 
