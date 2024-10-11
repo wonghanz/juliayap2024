@@ -3,7 +3,7 @@ body {
     background-image: url('images/flowers-bg.jpeg');
     background-size: cover; /* Cover will scale the image to cover the whole container */
     background-position: center; /* Center the image */
-    color: white;
+    color: #FF66B2; /* Rose color for text */
     font-family: 'Georgia', serif; /* Use a serif font for a classic feel */
     text-align: center;
     padding: 40px;
@@ -67,6 +67,25 @@ button:hover {
 #poem p {
     margin: 0; /* Remove default margin */
     padding: 5px 0; /* Space between lines */
+}
+
+/* Fade-in Animation */
+.fade-in {
+    opacity: 0;
+    animation: fadeInOut 1s forwards; /* Adjust timing as needed */
+}
+
+/* Keyframes for fading effect */
+@keyframes fadeInOut {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
 }
 
 /* Responsive Design */
