@@ -12,7 +12,7 @@ body {
 
 /* Container Styles */
 .container {
-    background: rgba(0, 0, 0, 0.7); /* Darker background for better text contrast */
+    background: rgba(255,255,255,0.5); /* Darker background for better text contrast */
     padding: 40px;
     border-radius: 20px;
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.7); /* Stronger shadow for depth */
