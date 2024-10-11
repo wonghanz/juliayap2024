@@ -1,7 +1,4 @@
-function playTrack(link) {
-    const audio = new Audio(link);
-    audio.play();
-}
+let currentLineIndex = 0;
 
 const poemLines = [
     "你是人间四月天，",
@@ -43,16 +40,24 @@ const poemLines = [
     "因你生命皆璀璨。"
 ];
 
-let poemHTML = '';
-poemLines.forEach((line, index) => {
-    poemHTML += `<p style="opacity: 0; transition: opacity 1s; animation: fade-in 0.5s forwards;">${line}</p>`;
-});
-document.getElementById('poem').innerHTML = poemHTML;
+function showNextLine() {
+    const poemDiv = document.getElementById('poem');
+    
+    // Clear current content
+    poemDiv.innerHTML = '';
+    
+    // Add the next line
+    if (currentLineIndex < poemLines.length) {
+        const line = document.createElement('p');
+        line.textContent = poemLines[currentLineIndex];
+        line.className = 'fade-in';
+        poemDiv.appendChild(line);
+        currentLineIndex++;
+        
+        // Set timeout for next line
+        setTimeout(showNextLine, 3000); // 3 seconds delay
+    }
+}
 
-// Fade in effect
-const paragraphs = document.querySelectorAll('#poem p');
-paragraphs.forEach((p, index) => {
-    setTimeout(() => {
-        p.style.opacity = 1;
-    }, index * 1500); // Staggered appearance
-});
+// Start displaying the poem
+showNextLine();
