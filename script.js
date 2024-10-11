@@ -61,3 +61,24 @@ function showNextLine() {
 
 // Start displaying the poem
 showNextLine();
+
+// Function to play music
+function playMusic(type) {
+    const audio = new Audio();
+    
+    switch (type) {
+        case 'chinese':
+            audio.src = 'https://drive.google.com/uc?export=download&id=1fTcZPYWPVNml0G-TdZD3MZ3HDeo6g8y5';
+            break;
+        case 'christian':
+            audio.src = 'https://drive.google.com/uc?export=download&id=1qCHqlAqfSMpP1FFHae9AL48H_vrhIKG8';
+            break;
+        case 'piano':
+            audio.src = 'https://drive.google.com/uc?export=download&id=18MhuWrt0nWcGyfTRlj-FGSLwafFDsLAB';
+            break;
+    }
+
+    audio.play().catch((error) => {
+        console.error('Error playing audio:', error);
+    });
+}
