@@ -1,31 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Happy Birthday Julia!</title>
+    <title>Birthday Surprise for Julia</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
-        <h1>Happy 17th Birthday, Julia! 🎉</h1>
-        <p>May God bless you with success in SPM and guide you in all your endeavors!</p>
-        <p>Remember, SPM is not the end; I’ll always be here for you after it!</p>
-        <h2>Julia, you are the best! 💝💞❤️‍🔥</h2>
-        <p>Take care of yourself, and remember to not let stress bring you down.</p>
+        <h1>Happy 17th Birthday, Julia!</h1>
+        <h2>Wishing You Blessings from God</h2>
+        
+        <p>“I will find you after SPM, it's not our ending!”</p>
         
         <div class="music-buttons">
-            <button onclick="playTrack('https://drive.google.com/uc?id=1qCHqlAqfSMpP1FFHae9AL48H_vrhIKG8')">Play Christian Track</button>
-            <button onclick="playTrack('https://drive.google.com/uc?id=1fTcZPYWPVNml0G-TdZD3MZ3HDeo6g8y5')">Play Chinese Track</button>
-            <button onclick="playTrack('https://drive.google.com/uc?id=18MhuWrt0nWcGyfTRlj-FGSLwafFDsLAB')">Play Piano Track</button>
+            <button onclick="playMusic('chinese')">Play Chinese Song</button>
+            <button onclick="playMusic('christian')">Play Christian Song</button>
+            <button onclick="playMusic('piano')">Play Piano Music</button>
         </div>
-
-        <audio id="bg-music" loop autoplay>
-            <source src="https://drive.google.com/uc?id=1fTcZPYWPVNml0G-TdZD3MZ3HDeo6g8y5" type="audio/mpeg">
-            Your browser does not support the audio element.
-        </audio>
-
+        
         <div id="poem"></div>
+        
+        <p>Take care of yourself, don't be sad anymore!</p>
+        <h3>Julia is the best! 💝💞❤️‍🔥</h3>
     </div>
 
     <script src="script.js"></script>
