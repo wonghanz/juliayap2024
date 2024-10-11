@@ -58,8 +58,8 @@ function showNextLine() {
         setTimeout(() => {
             // Hide the line after 5 seconds
             poemDiv.innerHTML = ''; // Clear the line
-            setTimeout(showNextLine, 3000); // Wait for 3 seconds before showing the next line
-        }, 5000); // Show line for 5 seconds
+            setTimeout(showNextLine, 5000); // Wait for 3 seconds before showing the next line
+        }, 8000); // Show line for 5 seconds
     }
 }
 
